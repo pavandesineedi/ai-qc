@@ -59,6 +59,11 @@ def check_response(response):
         print("Response looks good")
 
 
-sample_response = input("Enter AI response: ")
+with open("data1/responses.txt", "r") as file:
+    responses = file.readlines()
 
-check_response(sample_response)
+for response in responses:
+    print("\nChecking Response:")
+    print(response.strip())
+
+    check_response(response.strip())
