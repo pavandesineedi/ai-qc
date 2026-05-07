@@ -4,7 +4,7 @@ def check_response(response):
     if not response.strip():
         issues.append("Empty response")
 
-    if len(response.split()) < 5:
+    if len(response.split()) < 12:
         issues.append("Response too short")
 
     banned_words = ["hate", "kill", "stupid"]
